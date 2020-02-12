@@ -30,6 +30,8 @@ public class AmberExe3 {
         String zapamietanyTekst = driver.findElement(By.xpath(tekstDoWybraniaXPath)).getText();
         Select dropdown = new Select(driver.findElement(By.id(SELECTOR_ID)));
         dropdown.selectByVisibleText(zapamietanyTekst);
+
+//        new Select(driver.findElement(By.id(SELECTOR_ID))).selectByVisibleText(driver.findElement(By.xpath(tekstDoWybraniaXPath)).getText()); # zagnieżdżenie metod z trzech linii powyżej
     }
     @When("Uzytkownik klika przcisk potwierdzenia rozwiazania")
     public void uzytkownik_klika_przcisk_potwierdzenia_rozwiazania() {
